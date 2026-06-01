@@ -5,172 +5,52 @@
 // --- Sample Data ---
 const teamMembers = [
     {
-        id: 1, firstName: 'Sarah', lastName: 'Chen', role: 'Engineering Lead',
-        department: 'engineering', status: 'active', location: 'San Francisco, CA',
-        email: 'sarah.chen@company.com', phone: '+1 (415) 555-0101',
+        id: 1, firstName: 'Tyler', lastName: '', role: 'Senior Sales Associate',
+        department: 'sales', status: 'active', location: 'Phoenix, AZ',
+        email: 'tyler@company.com', phone: '+1 (602) 555-0101',
         joinDate: '2021-03-15', projectsCompleted: 34, tasksInProgress: 5,
-        avatar: 'Sarah', remote: false
+        avatar: 'Tyler', remote: false,
+        reviewAverage: 4.8, upsells: 32, sales: 48200
     },
     {
-        id: 2, firstName: 'Marcus', lastName: 'Rodriguez', role: 'Senior Designer',
-        department: 'design', status: 'active', location: 'Austin, TX',
-        email: 'marcus.r@company.com', phone: '+1 (512) 555-0202',
+        id: 2, firstName: 'Leesa', lastName: '', role: 'Account Manager',
+        department: 'sales', status: 'active', location: 'Austin, TX',
+        email: 'leesa@company.com', phone: '+1 (512) 555-0202',
         joinDate: '2020-07-22', projectsCompleted: 28, tasksInProgress: 3,
-        avatar: 'Marcus', remote: false
+        avatar: 'Leesa', remote: true,
+        reviewAverage: 4.6, upsells: 27, sales: 41500
     },
     {
-        id: 3, firstName: 'Aisha', lastName: 'Patel', role: 'Product Manager',
-        department: 'marketing', status: 'remote', location: 'New York, NY',
-        email: 'aisha.p@company.com', phone: '+1 (212) 555-0303',
+        id: 3, firstName: 'Kindsey', lastName: '', role: 'Marketing Specialist',
+        department: 'marketing', status: 'active', location: 'Denver, CO',
+        email: 'kindsey@company.com', phone: '+1 (303) 555-0303',
         joinDate: '2022-01-10', projectsCompleted: 19, tasksInProgress: 4,
-        avatar: 'Aisha', remote: true
+        avatar: 'Kindsey', remote: false,
+        reviewAverage: 4.9, upsells: 21, sales: 38900
     },
     {
-        id: 4, firstName: 'James', lastName: 'O\'Brien', role: 'Sales Director',
-        department: 'sales', status: 'active', location: 'Chicago, IL',
-        email: 'james.ob@company.com', phone: '+1 (312) 555-0404',
-        joinDate: '2019-11-05', projectsCompleted: 42, tasksInProgress: 2,
-        avatar: 'James', remote: false
-    },
-    {
-        id: 5, firstName: 'Yuki', lastName: 'Tanaka', role: 'UX Researcher',
-        department: 'design', status: 'on-leave', location: 'Seattle, WA',
-        email: 'yuki.t@company.com', phone: '+1 (206) 555-0505',
+        id: 4, firstName: 'Angel', lastName: '', role: 'Sales Associate',
+        department: 'sales', status: 'on-leave', location: 'Miami, FL',
+        email: 'angel@company.com', phone: '+1 (305) 555-0404',
         joinDate: '2022-06-18', projectsCompleted: 15, tasksInProgress: 0,
-        avatar: 'Yuki', remote: false
+        avatar: 'Angel', remote: false,
+        reviewAverage: 4.5, upsells: 19, sales: 33400
     },
     {
-        id: 6, firstName: 'David', lastName: 'Kim', role: 'Backend Engineer',
-        department: 'engineering', status: 'active', location: 'Portland, OR',
-        email: 'david.kim@company.com', phone: '+1 (503) 555-0606',
-        joinDate: '2021-09-01', projectsCompleted: 27, tasksInProgress: 6,
-        avatar: 'David', remote: true
-    },
-    {
-        id: 7, firstName: 'Elena', lastName: 'Volkov', role: 'HR Manager',
-        department: 'hr', status: 'active', location: 'Denver, CO',
-        email: 'elena.v@company.com', phone: '+1 (303) 555-0707',
+        id: 5, firstName: 'Maryanne', lastName: '', role: 'Client Success Lead',
+        department: 'design', status: 'active', location: 'Seattle, WA',
+        email: 'maryanne@company.com', phone: '+1 (206) 555-0505',
         joinDate: '2020-02-14', projectsCompleted: 22, tasksInProgress: 3,
-        avatar: 'Elena', remote: false
+        avatar: 'Maryanne', remote: false,
+        reviewAverage: 4.7, upsells: 24, sales: 45100
     },
     {
-        id: 8, firstName: 'Carlos', lastName: 'Mendoza', role: 'Financial Analyst',
-        department: 'finance', status: 'remote', location: 'Miami, FL',
-        email: 'carlos.m@company.com', phone: '+1 (305) 555-0808',
-        joinDate: '2022-04-20', projectsCompleted: 12, tasksInProgress: 2,
-        avatar: 'Carlos', remote: true
-    },
-    {
-        id: 9, firstName: 'Priya', lastName: 'Sharma', role: 'Frontend Engineer',
-        department: 'engineering', status: 'active', location: 'San Francisco, CA',
-        email: 'priya.s@company.com', phone: '+1 (415) 555-0909',
-        joinDate: '2023-01-09', projectsCompleted: 14, tasksInProgress: 4,
-        avatar: 'Priya', remote: false
-    },
-    {
-        id: 10, firstName: 'Tom', lastName: 'Anderson', role: 'Marketing Lead',
-        department: 'marketing', status: 'active', location: 'Los Angeles, CA',
-        email: 'tom.a@company.com', phone: '+1 (310) 555-1010',
-        joinDate: '2021-05-25', projectsCompleted: 31, tasksInProgress: 2,
-        avatar: 'Tom', remote: false
-    },
-    {
-        id: 11, firstName: 'Nina', lastName: 'Kowalski', role: 'Sales Representative',
-        department: 'sales', status: 'on-leave', location: 'Boston, MA',
-        email: 'nina.k@company.com', phone: '+1 (617) 555-1111',
-        joinDate: '2022-08-12', projectsCompleted: 18, tasksInProgress: 0,
-        avatar: 'Nina', remote: false
-    },
-    {
-        id: 12, firstName: 'Raj', lastName: 'Gupta', role: 'DevOps Engineer',
-        department: 'engineering', status: 'remote', location: 'Austin, TX',
-        email: 'raj.g@company.com', phone: '+1 (512) 555-1212',
-        joinDate: '2021-11-30', projectsCompleted: 25, tasksInProgress: 3,
-        avatar: 'Raj', remote: true
-    },
-    {
-        id: 13, firstName: 'Lisa', lastName: 'Wong', role: 'Content Strategist',
-        department: 'marketing', status: 'active', location: 'Seattle, WA',
-        email: 'lisa.w@company.com', phone: '+1 (206) 555-1313',
-        joinDate: '2023-03-07', projectsCompleted: 9, tasksInProgress: 3,
-        avatar: 'Lisa', remote: true
-    },
-    {
-        id: 14, firstName: 'Ahmed', lastName: 'Hassan', role: 'Account Executive',
-        department: 'sales', status: 'active', location: 'Dallas, TX',
-        email: 'ahmed.h@company.com', phone: '+1 (214) 555-1414',
-        joinDate: '2022-02-28', projectsCompleted: 21, tasksInProgress: 4,
-        avatar: 'Ahmed', remote: false
-    },
-    {
-        id: 15, firstName: 'Sophie', lastName: 'Martin', role: 'Graphic Designer',
-        department: 'design', status: 'active', location: 'Portland, OR',
-        email: 'sophie.m@company.com', phone: '+1 (503) 555-1515',
-        joinDate: '2023-05-15', projectsCompleted: 11, tasksInProgress: 2,
-        avatar: 'Sophie', remote: false
-    },
-    {
-        id: 16, firstName: 'Michael', lastName: 'Brown', role: 'CFO',
-        department: 'finance', status: 'active', location: 'New York, NY',
-        email: 'michael.b@company.com', phone: '+1 (212) 555-1616',
-        joinDate: '2018-06-01', projectsCompleted: 45, tasksInProgress: 1,
-        avatar: 'Michael', remote: false
-    },
-    {
-        id: 17, firstName: 'Chloe', lastName: 'Dubois', role: 'UX Designer',
-        department: 'design', status: 'on-leave', location: 'San Francisco, CA',
-        email: 'chloe.d@company.com', phone: '+1 (415) 555-1717',
-        joinDate: '2022-09-12', projectsCompleted: 16, tasksInProgress: 0,
-        avatar: 'Chloe', remote: false
-    },
-    {
-        id: 18, firstName: 'Wei', lastName: 'Zhang', role: 'Full Stack Developer',
-        department: 'engineering', status: 'active', location: 'San Jose, CA',
-        email: 'wei.z@company.com', phone: '+1 (408) 555-1818',
-        joinDate: '2022-11-01', projectsCompleted: 20, tasksInProgress: 5,
-        avatar: 'Wei', remote: true
-    },
-    {
-        id: 19, firstName: 'Anna', lastName: 'Petrova', role: 'HR Coordinator',
-        department: 'hr', status: 'active', location: 'Denver, CO',
-        email: 'anna.p@company.com', phone: '+1 (303) 555-1919',
-        joinDate: '2023-02-20', projectsCompleted: 8, tasksInProgress: 2,
-        avatar: 'Anna', remote: false
-    },
-    {
-        id: 20, firstName: 'Jason', lastName: 'Lee', role: 'Sales Manager',
-        department: 'sales', status: 'active', location: 'Chicago, IL',
-        email: 'jason.l@company.com', phone: '+1 (312) 555-2020',
-        joinDate: '2020-04-10', projectsCompleted: 38, tasksInProgress: 3,
-        avatar: 'Jason', remote: false
-    },
-    {
-        id: 21, firstName: 'Fatima', lastName: 'Al-Rashid', role: 'Data Analyst',
-        department: 'finance', status: 'active', location: 'Washington, DC',
-        email: 'fatima.ar@company.com', phone: '+1 (202) 555-2121',
-        joinDate: '2023-06-01', projectsCompleted: 7, tasksInProgress: 3,
-        avatar: 'Fatima', remote: true
-    },
-    {
-        id: 22, firstName: 'Oscar', lastName: 'Nilsson', role: 'QA Engineer',
-        department: 'engineering', status: 'on-leave', location: 'Minneapolis, MN',
-        email: 'oscar.n@company.com', phone: '+1 (612) 555-2222',
-        joinDate: '2022-07-18', projectsCompleted: 23, tasksInProgress: 0,
-        avatar: 'Oscar', remote: false
-    },
-    {
-        id: 23, firstName: 'Mia', lastName: 'Johnson', role: 'Brand Manager',
-        department: 'marketing', status: 'active', location: 'Nashville, TN',
-        email: 'mia.j@company.com', phone: '+1 (615) 555-2323',
-        joinDate: '2021-08-05', projectsCompleted: 26, tasksInProgress: 2,
-        avatar: 'Mia', remote: false
-    },
-    {
-        id: 24, firstName: 'Alex', lastName: 'Turner', role: 'Security Engineer',
-        department: 'engineering', status: 'active', location: 'Remote',
-        email: 'alex.t@company.com', phone: '+1 (555) 555-2424',
-        joinDate: '2023-04-10', projectsCompleted: 10, tasksInProgress: 4,
-        avatar: 'Alex', remote: true
+        id: 6, firstName: 'Wendy', lastName: '', role: 'Marketing Coordinator',
+        department: 'marketing', status: 'active', location: 'Portland, OR',
+        email: 'wendy@company.com', phone: '+1 (503) 555-0606',
+        joinDate: '2021-09-01', projectsCompleted: 27, tasksInProgress: 6,
+        avatar: 'Wendy', remote: true,
+        reviewAverage: 4.4, upsells: 30, sales: 39750
     }
 ];
 
@@ -610,24 +490,102 @@ addMemberForm.addEventListener('submit', (e) => {
         projectsCompleted: 0,
         tasksInProgress: 0,
         avatar: firstName,
-        remote: false
+        remote: false,
+        reviewAverage: 0,
+        upsells: 0,
+        sales: 0
     };
 
     teamMembers.unshift(newMember);
     renderMembers();
+    renderReports();
     closeModal(addMemberModal);
     addMemberForm.reset();
     showToast(`${firstName} ${lastName} has been added to the team!`, 'success');
 });
 
-// Nav items (just visual active state)
+// --- Reports ---
+function formatCurrency(value) {
+    return '$' + value.toLocaleString('en-US');
+}
+
+function renderReports() {
+    const tableBody = document.getElementById('reportsTableBody');
+    if (!tableBody) return;
+
+    const count = teamMembers.length;
+    const avgReview = count
+        ? (teamMembers.reduce((sum, m) => sum + (m.reviewAverage || 0), 0) / count)
+        : 0;
+    const totalUpsells = teamMembers.reduce((sum, m) => sum + (m.upsells || 0), 0);
+    const totalSales = teamMembers.reduce((sum, m) => sum + (m.sales || 0), 0);
+
+    document.getElementById('avgReview').textContent = avgReview.toFixed(1);
+    document.getElementById('totalUpsells').textContent = totalUpsells;
+    document.getElementById('totalSales').textContent = formatCurrency(totalSales);
+    document.getElementById('reportMembers').textContent = count;
+
+    tableBody.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+    teamMembers.forEach(member => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>
+                <div class="reports-member">
+                    <div class="reports-avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=${member.avatar}" alt="${member.firstName}">
+                    </div>
+                    <div>
+                        <div class="reports-member-name">${member.firstName} ${member.lastName}</div>
+                        <div class="reports-member-role">${member.role}</div>
+                    </div>
+                </div>
+            </td>
+            <td><span class="reports-review">${(member.reviewAverage || 0).toFixed(1)} <span class="reports-star">★</span></span></td>
+            <td>${member.upsells || 0}</td>
+            <td>${formatCurrency(member.sales || 0)}</td>
+        `;
+        fragment.appendChild(row);
+    });
+    tableBody.appendChild(fragment);
+}
+
+// --- Section Switching ---
+const sectionTitles = {
+    dashboard: { title: 'Team Dashboard', subtitle: "Manage and track your team's performance at a glance" },
+    members: { title: 'Members', subtitle: 'Browse and manage your team members' }
+};
+
+function showSection(section) {
+    const dashboardView = document.getElementById('dashboardView');
+    const reportsView = document.getElementById('reportsView');
+
+    if (section === 'reports') {
+        dashboardView.classList.add('hidden');
+        reportsView.classList.remove('hidden');
+        renderReports();
+    } else {
+        reportsView.classList.add('hidden');
+        dashboardView.classList.remove('hidden');
+        const meta = sectionTitles[section] || sectionTitles.dashboard;
+        const header = dashboardView.querySelector('.page-header-text');
+        if (header) {
+            header.querySelector('h1').textContent = meta.title;
+            header.querySelector('p').textContent = meta.subtitle;
+        }
+    }
+}
+
+// Nav items: visual active state + section switching
 document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
         document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
         item.classList.add('active');
+        showSection(item.dataset.section);
     });
 });
 
 // --- Initialize ---
 renderMembers();
+renderReports();
