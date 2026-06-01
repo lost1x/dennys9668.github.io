@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,7 +75,7 @@
                 <svg class="moon-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M15.5 10.41A6.5 6.5 0 017.59 2.5a6.5 6.5 0 107.91 7.91z"/>
                 </svg>
-                <span class="theme-label">Dark Mode</span>
+                <span class="theme-label">Light Mode</span>
             </div>
         </div>
     </aside>
@@ -115,6 +115,7 @@
 
         <!-- Dashboard Content -->
         <div class="content-wrapper">
+            <div class="view" id="dashboardView">
             <!-- Page Header -->
             <div class="page-header">
                 <div class="page-header-text">
@@ -237,6 +238,80 @@
                 </svg>
                 <h3>No members found</h3>
                 <p>Try adjusting your search or filter criteria</p>
+            </div>
+            </div>
+
+            <!-- Reports View -->
+            <div class="view hidden" id="reportsView">
+                <div class="page-header">
+                    <div class="page-header-text">
+                        <h1>Reports</h1>
+                        <p>Team performance metrics at a glance</p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card stat-total">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.1l1-5.8L3.5 9.2l5.9-.9L12 3z" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="avgReview">&mdash;</span>
+                            <span class="stat-label">Review Average</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-active">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 17l5-5 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 8h4v4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalUpsells">&mdash;</span>
+                            <span class="stat-label">Upsells</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-departments">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalSales">&mdash;</span>
+                            <span class="stat-label">Total Sales</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-onleave">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M4 22c0-4.42 3.58-8 8-8s8 3.58 8 8"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="reportMembers">&mdash;</span>
+                            <span class="stat-label">Team Members</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reports-table-wrapper">
+                    <table class="reports-table">
+                        <thead>
+                            <tr>
+                                <th>Member</th>
+                                <th>Review Average</th>
+                                <th>Upsells</th>
+                                <th>Sales</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportsTableBody"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
