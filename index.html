@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denny</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#">denny</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Welcome</p>
+      <h1 class="hero-title">Building things on the web.</h1>
+      <p class="hero-subtitle">
+        A clean, dark, modern space. Minimal by design, focused on what matters.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">View Work</a>
+        <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 class="section-title">About</h2>
+      <p class="section-body">
+        This is a starter page with a dark modern aesthetic — black background,
+        white lettering, and a restrained layout that keeps the focus on content.
+      </p>
+    </section>
+
+    <section id="work" class="section">
+      <h2 class="section-title">Work</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>A short description of a project goes here.</p>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>A short description of a project goes here.</p>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>A short description of a project goes here.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-body">
+        Reach out anytime — <a href="mailto:hello@example.com">hello@example.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> denny. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
