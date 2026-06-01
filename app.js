@@ -5,7 +5,7 @@
 // --- Sample Data ---
 const teamMembers = [
     {
-        id: 1, firstName: 'Tyler', lastName: '', role: 'Senior Sales Associate',
+        id: 1, firstName: 'Tyler', lastName: '', role: 'Server',
         department: 'sales', status: 'active', location: 'Phoenix, AZ',
         email: 'tyler@company.com', phone: '+1 (602) 555-0101',
         joinDate: '2021-03-15', projectsCompleted: 34, tasksInProgress: 5,
@@ -13,7 +13,7 @@ const teamMembers = [
         reviewAverage: 4.8, upsells: 32, sales: 48200
     },
     {
-        id: 2, firstName: 'Leesa', lastName: '', role: 'Account Manager',
+        id: 2, firstName: 'Leesa', lastName: '', role: 'Server',
         department: 'sales', status: 'active', location: 'Austin, TX',
         email: 'leesa@company.com', phone: '+1 (512) 555-0202',
         joinDate: '2020-07-22', projectsCompleted: 28, tasksInProgress: 3,
@@ -21,15 +21,15 @@ const teamMembers = [
         reviewAverage: 4.6, upsells: 27, sales: 41500
     },
     {
-        id: 3, firstName: 'Kindsey', lastName: '', role: 'Marketing Specialist',
+        id: 3, firstName: 'Lindsey', lastName: '', role: 'Server',
         department: 'marketing', status: 'active', location: 'Denver, CO',
-        email: 'kindsey@company.com', phone: '+1 (303) 555-0303',
+        email: 'Lindsey@company.com', phone: '+1 (303) 555-0303',
         joinDate: '2022-01-10', projectsCompleted: 19, tasksInProgress: 4,
-        avatar: 'Kindsey', remote: false,
+        avatar: 'Lindsey', remote: false,
         reviewAverage: 4.9, upsells: 21, sales: 38900
     },
     {
-        id: 4, firstName: 'Angel', lastName: '', role: 'Sales Associate',
+        id: 4, firstName: 'Angel', lastName: '', role: 'Server',
         department: 'sales', status: 'on-leave', location: 'Miami, FL',
         email: 'angel@company.com', phone: '+1 (305) 555-0404',
         joinDate: '2022-06-18', projectsCompleted: 15, tasksInProgress: 0,
@@ -37,7 +37,7 @@ const teamMembers = [
         reviewAverage: 4.5, upsells: 19, sales: 33400
     },
     {
-        id: 5, firstName: 'Maryanne', lastName: '', role: 'Client Success Lead',
+        id: 5, firstName: 'Maryanne', lastName: '', role: 'Server',
         department: 'design', status: 'active', location: 'Seattle, WA',
         email: 'maryanne@company.com', phone: '+1 (206) 555-0505',
         joinDate: '2020-02-14', projectsCompleted: 22, tasksInProgress: 3,
@@ -45,7 +45,7 @@ const teamMembers = [
         reviewAverage: 4.7, upsells: 24, sales: 45100
     },
     {
-        id: 6, firstName: 'Wendy', lastName: '', role: 'Marketing Coordinator',
+        id: 6, firstName: 'Wendy', lastName: '', role: 'Server',
         department: 'marketing', status: 'active', location: 'Portland, OR',
         email: 'wendy@company.com', phone: '+1 (503) 555-0606',
         joinDate: '2021-09-01', projectsCompleted: 27, tasksInProgress: 6,
