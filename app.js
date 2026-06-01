@@ -6,7 +6,7 @@
 const teamMembers = [
     {
         id: 1, firstName: 'Tyler', lastName: '', role: 'Server',
-        department: 'sales', status: 'active', location: 'Phoenix, AZ',
+        department: 'sales', status: 'active', location: 'Lewiston, ID',
         email: 'tyler@company.com', phone: '+1 (602) 555-0101',
         joinDate: '2021-03-15', projectsCompleted: 34, tasksInProgress: 5,
         avatar: 'Tyler', remote: false,
@@ -14,7 +14,7 @@ const teamMembers = [
     },
     {
         id: 2, firstName: 'Leesa', lastName: '', role: 'Server',
-        department: 'sales', status: 'active', location: 'Austin, TX',
+        department: 'sales', status: 'active', location: 'Lewiston, ID',
         email: 'leesa@company.com', phone: '+1 (512) 555-0202',
         joinDate: '2020-07-22', projectsCompleted: 28, tasksInProgress: 3,
         avatar: 'Leesa', remote: true,
@@ -22,7 +22,7 @@ const teamMembers = [
     },
     {
         id: 3, firstName: 'Lindsey', lastName: '', role: 'Server',
-        department: 'marketing', status: 'active', location: 'Denver, CO',
+        department: 'marketing', status: 'active', location: 'Lewiston, ID',
         email: 'Lindsey@company.com', phone: '+1 (303) 555-0303',
         joinDate: '2022-01-10', projectsCompleted: 19, tasksInProgress: 4,
         avatar: 'Lindsey', remote: false,
@@ -30,7 +30,7 @@ const teamMembers = [
     },
     {
         id: 4, firstName: 'Angel', lastName: '', role: 'Server',
-        department: 'sales', status: 'on-leave', location: 'Miami, FL',
+        department: 'sales', status: 'on-leave', location: 'Lewiston, ID',
         email: 'angel@company.com', phone: '+1 (305) 555-0404',
         joinDate: '2022-06-18', projectsCompleted: 15, tasksInProgress: 0,
         avatar: 'Angel', remote: false,
@@ -38,7 +38,7 @@ const teamMembers = [
     },
     {
         id: 5, firstName: 'Maryanne', lastName: '', role: 'Server',
-        department: 'design', status: 'active', location: 'Seattle, WA',
+        department: 'design', status: 'active', location: 'Lewiston, ID',
         email: 'maryanne@company.com', phone: '+1 (206) 555-0505',
         joinDate: '2020-02-14', projectsCompleted: 22, tasksInProgress: 3,
         avatar: 'Maryanne', remote: false,
@@ -46,7 +46,7 @@ const teamMembers = [
     },
     {
         id: 6, firstName: 'Wendy', lastName: '', role: 'Server',
-        department: 'marketing', status: 'active', location: 'Portland, OR',
+        department: 'marketing', status: 'active', location: 'Lewiston, ID',
         email: 'wendy@company.com', phone: '+1 (503) 555-0606',
         joinDate: '2021-09-01', projectsCompleted: 27, tasksInProgress: 6,
         avatar: 'Wendy', remote: true,
@@ -469,7 +469,7 @@ addMemberForm.addEventListener('submit', (e) => {
     const email = document.getElementById('email').value.trim();
     const role = document.getElementById('role').value.trim();
     const department = document.getElementById('addDepartment').value;
-    const location = document.getElementById('location').value.trim() || 'Remote';
+    const location = document.getElementById('location').value.trim() || 'Lewiston, ID';
 
     if (!firstName || !lastName || !email || !role || !department) {
         showToast('Please fill in all required fields', 'error');
